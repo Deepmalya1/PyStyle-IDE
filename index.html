@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PyStyle</title>
+        <link rel="stylesheet" href="styles.css">
+        
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/codemirror.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/theme/monokai.min.css">
+        
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/addon/hint/show-hint.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/addon/hint/show-hint.min.css">
+    
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/mode/python/python.min.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/hint/anyword-hint.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/hint/show-hint.min.css">
+        
+
+    </head>
+
+<body class="flex flex-col h-screen">
+    <div id="drag-area"></div>
+    <div class="flex justify-between p-2 bg-gray-200">
+        <div>
+            <button id="openBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
+                Open
+            </button>
+            <button id="saveBtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2">
+                Save
+            </button>
+            <button id="runBtn" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
+                Run
+            </button>
+        </div>
+        <div id="filePathDisplay" class="text-gray-600 self-center"></div>
+    </div>
+
+    <div class="flex-grow">
+        <textarea id="code-editor" class="w-full h-full font-bold"></textarea>
+    </div>
+
+    <div id="output-panel" class="bg-gray-100 p-4">
+        <h3 class="text-lg font-bold mb-2">Output</h3>
+        <pre id="output-content"></pre> <!-- Scrollable content area -->
+    </div>
+
+    <!-- CodeMirror JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/mode/python/python.min.js"></script>
+    
+    <!-- Renderer Script -->
+    <script src="code-editing.js"></script>
+</body>
+</html>

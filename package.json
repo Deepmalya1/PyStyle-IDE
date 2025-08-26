@@ -1,0 +1,43 @@
+{
+  "name": "pystyle",
+  "version": "1.0.0",
+  "description": "This is an IDE Made by Deepmalya(Akio) Designed only for Python. It is in Early Access so expect some bugs.",
+  "author": "Deepmalya Acharya",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "electron-tabs": "^1.0.4"
+  },
+  "build": {
+    "appId": "com.yourcompany.yourapp",
+    "productName": "PyStyle",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.icns"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "build/icons"
+    }
+  }
+}

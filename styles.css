@@ -1,0 +1,57 @@
+
+body, html {
+    height: 100% !important;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.CodeMirror {
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(50px) !important;
+    -webkit-backdrop-filter: blur(50px) !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+    height: 100% !important;
+    width: 100% !important;
+    border-radius: 12px;
+    max-height: calc(100vh - 150px);
+    overflow: auto;
+    font-weight: bolder;
+}
+/* styles.css */
+
+#output-panel {
+    display: none;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+    max-height: 0;
+}
+#output-panel.expanded {
+    max-height: auto; 
+    min-height: 300px;
+}
+#output-content {
+    
+    max-height: 250px;
+    overflow-y: auto; 
+    overflow-x: auto; 
+    background-color: #ffffff;
+    background: transparent;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-weight: bolder;
+}
+#output-panel.expanded {
+    display: block;
+    max-height: 900px; 
+}
+#drag-area {
+    height: 30px; 
+    background-color: #333; 
+    cursor: move; 
+    -webkit-app-region: drag; 
+}
